@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Oswald|Rubik+Mono+One&display=swap');
+
+$tomato-color: #FF6347;
+
+@mixin grid-test() {
+  border-style: solid;
+}
+
+@mixin box() {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            'label label label'
+            'up time down';
+}
+
+@mixin box-label() {
+    grid-area: label;
+    font-family: 'Oswald', sans-serif;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+@mixin box-increment() {
+    grid-area: up;
+    position: relative;
+    font-size: 37px;
+    bottom: 3px;
+}
+
+@mixin box-number() {
+    grid-area: time;
+    line-height: 30px;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+@mixin box-decrement() {
+    grid-area: down;
+    position: relative;
+    font-size: 37px;
+    bottom: 3px;
+}
+
+.wrapper {
+  display: grid;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  grid-template-rows: 100px 100px 200px;
+  grid-template-columns: 200px 150px 200px;
+  grid-template-areas:
+    'title title title'
+    'break controls session'
+    'timer timer timer';
+  grid-gap: 10px;
+  background-image: url('https://previews.123rf.com/images/zzorik/zzorik1604/zzorik160400033/54465712-seamless-background-with-tomatoes-and-basil-for-cooking-seamless-backdrop.jpg');
+  
+  #title {
+    grid-area: title;
+    @include grid-test();
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 40px;
+    line-height: 100px;
+    color: $tomato-color;
+    border-color: black;
+    background-color: white;
+  }
+  
+  #break-box {
+    grid-area: break;
+    @include grid-test();
+    @include box();
+    border-color: $tomato-color;
+    background-color: white;
+    
+    #break-label {
+      @include box-label;
+    }
+    
+    #break-increment {
+      @include box-increment;
+    }
+    
+    #break-number {
+      @include box-number;
+    }
+    
+    #break-decrement {
+      @include box-decrement;
+    }
+  }
+  
+  #session-box {
+    grid-area: session;
+    @include grid-test();
+    @include box;
+    border-color: $tomato-color;
+    background-color: white;
+    
+    #session-label {
+      @include box-label;
+    }
+    
+    #session-increment {
+      @include box-increment;
+    }
+    
+    #session-number {
+      @include box-number;
+    }
+    
+    #session-decrement {
+      @include box-decrement;
+    }
+  }
+  
+  #controls-box {
+    grid-area: controls;
+    @include grid-test();
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+            'label label'
+            'pause restart';
+    align-items: center;
+    background-color: white;
+    
+    #controls-label {
+      grid-area: label;
+      font-family: 'Oswald', sans-serif;
+      line-height: 50px;
+      font-size: 30px;
+    }
+    
+    #controls-pause {
+      grid-area: pause;
+      font-size: 23px;
+    }
+    
+    #controls-restart {
+      grid-area: restart;
+      font-size: 23px;
+    }
+  }
+  
+  #timer-box {
+    grid-area: timer;
+    @include grid-test();
+    display: grid;
+    grid-template-rows: 1f 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: white;
+    
+    #timer-label {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 50px;
+      letter-spacing: 3px;
+    }
+    
+    #timer-time {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 50px;
+    }
+    
+  }
+}
