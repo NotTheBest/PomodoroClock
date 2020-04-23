@@ -2,7 +2,7 @@
 
 A fun, tomato themed browser __Pomodoro Clock__ for all your studying and grinding needs!
 
-Made with JavaScript (Babel and SCSS to launch).
+Made with __React JS__ (Babel and SCSS to launch).
 
 ![Preview of Clock](https://github.com/NotTheBest/PomodoroClock/blob/master/Images/ClockPreview.png?raw=true)
 
