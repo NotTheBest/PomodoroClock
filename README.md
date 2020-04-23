@@ -1,11 +1,14 @@
-# JavaScript Pong :8ball:
+# Pomodoro Clock :tomato:
 
-A simple JavaScript pong browser game. Play against a computer and see how long you can last!
+A fun, tomato themed browser __Pomodoro Clock__ for all your studying and grinding needs!
 
-![Preview of Game](https://github.com/NotTheBest/JavaScriptPong/blob/master/Images/GamePreview.png?raw=true)
+Made with JavaScript (Babel and SCSS to launch).
+
+![Preview of Clock](https://github.com/NotTheBest/PomodoroClock/blob/master/Images/ClockPreview.png?raw=true)
+
 ## Installing
 
-To play, simply clone repo or download files and run index.html!
+To use, simply clone repo or download files and run index.html!
 
 ### About
 
